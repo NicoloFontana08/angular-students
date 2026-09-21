@@ -8,8 +8,8 @@ import { CommonModule, NgStyle } from '@angular/common';
   templateUrl: './student.html',
 })
 export class Student {
-  M_COLOR= "lightblue";
-  F_COLOR="pink"
+  M_COLOR = "lightblue";
+  F_COLOR = "pink"
 
   students: any[] = [
     { name: "Pippo", city: "Topolinia", gender: "M", present: true },
@@ -20,4 +20,13 @@ export class Student {
     { name: "Gastone", city: "Paperopoli", gender: "M", present: false }
 
   ];
+
+  getStyle(s:any) {
+    return {
+      'backgroundColor': s.gender == 'F' ? this.F_COLOR : this.M_COLOR,
+      'textDecoration': s.present ? 'none' : 'underline',
+      'fontWeight': s.present ? 'normal' : 'bold'
+    }
+  }
+
 }
