@@ -8,6 +8,9 @@ import { CommonModule, NgStyle } from '@angular/common';
   templateUrl: './student.html',
 })
 export class Student {
+  M_COLOR= "lightblue";
+  F_COLOR="pink"
+
   students: any[] = [
     { name: "Pippo", city: "Topolinia", gender: "M", present: true },
     { name: "Pluto", city: "Topolinia", gender: "M", present: false },
